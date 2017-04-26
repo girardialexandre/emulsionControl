@@ -1,0 +1,14 @@
+<ion-view view-title="Cadastro de Material de Processo">
+	<ion-content class="padding">	
+		<div class="list list-inset">
+			<input type="hidden" ng-model="cadastro.id">
+			<label class="item item-input">
+				<input ng-model="cadastro.matProcesso" type="text" placeholder="Digite o material de processo">
+			</label>
+			<br>			
+			<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+			<button class="button button-full button-positive" ui-sref="tabs.consmatprocesso">Consultar</button>
+			<p>{{ statusMessage }}</p>
+		</div>			
+    </ion-content>
+</ion-view>

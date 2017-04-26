@@ -1,0 +1,17 @@
+<ion-view view-title="Cadastro de &#211;leo">
+	<ion-content class="padding">	
+		<div class="list list-inset">
+			<input type="hidden" ng-model="cadastro.id">
+			<label class="item item-input">
+				<input ng-model="cadastro.descricao" type="text" placeholder="Digite a descri&#231;&#227;o do &#211;leo">
+			</label>			
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.dstipo" type="text" placeholder="Digite o tipo de &#211;leo">
+			</label>
+			<br>
+			<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+			<button class="button button-full button-positive" ui-sref="tabs.consoleo">Consultar</button>
+		</div>			
+    </ion-content>
+</ion-view>

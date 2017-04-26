@@ -1,0 +1,33 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+<ion-tabs class="tabs-icon-top tabs-color-active-positive">
+
+  <!-- Cadastros -->
+  <ion-tab title="Cadastros" icon-off="ion-cube" icon-on="ion-cube" href="#/tab/cadastro">	
+    <ion-nav-view name="tab-cadastro"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Marca��o -->
+  <ion-tab title="Marca&#231;&#227;o" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/marcacao">
+    <ion-nav-view name="tab-marcacao"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Relat�rios -->
+  <ion-tab title="Relat&#243;rios" icon-off="ion-arrow-graph-up-right" icon-on="ion-arrow-graph-up-right" href="#/tab/relatorios">
+    <ion-nav-view name="tab-relatorios"></ion-nav-view>
+  </ion-tab>
+  
+  <!-- Configura��es -->
+  <!--
+    <ion-tab title="Configura&ccedil;&otilde;es" icon-off="ion-settings" icon-on="ion-settings" href="#/tab/configuracoes">
+    <ion-nav-view name="tab-configuracoes"></ion-nav-view>
+  </ion-tab>
+  -->
+  <ion-tab title="Contato" icon-off="ion-email" icon-on="ion-email" href="#/tab/contato">
+    <ion-nav-view name="tab-contato"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

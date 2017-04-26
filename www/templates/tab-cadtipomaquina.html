@@ -1,0 +1,16 @@
+<ion-view view-title="Cadastro de Tipo de M&#225;quina">
+	<ion-content class="padding">	
+		<form id="cadTipoMaq" name="cadTipoMaq">
+			<div class="list list-inset">
+				<input type="hidden" ng-model="cadastro.id">
+				<label class="item item-input">
+					<input type="text" ng-model="cadastro.novoTipoMaquina" placeholder="Digite o tipo de m&#225;quina">
+				</label>			
+				<br>
+				<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+				<button class="button button-full button-positive" ui-sref="tabs.constipomaquina">Consultar</button>
+				<p>{{ statusMessage }}</p>
+			</div>
+		</form>
+    </ion-content>
+</ion-view>

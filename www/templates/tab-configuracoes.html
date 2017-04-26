@@ -1,0 +1,18 @@
+<ion-view view-title="Configura&ccedil;&otilde;es">
+  <ion-content class="padding">	
+		<div class="list list-inset">
+			<div class="item item-input item-select">
+				<div class="input-label">
+				  Idioma
+				</div>
+				<select ng-model="data.idIdioma">
+				  <option selected value="1">Portugu&#234;s</option>
+				  <option value="2">Ingl&#234;s</option>
+				  <option value="3">Alem&#227;o</option>
+				</select>
+			</div>		
+			<br>
+			<button class="button button-full button-positive" ng-click="save(data.idIdioma")>Salvar</button>		
+		</div>		
+    </ion-content>
+</ion-view>

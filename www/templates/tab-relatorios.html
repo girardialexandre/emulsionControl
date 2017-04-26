@@ -1,0 +1,36 @@
+<ion-view view-title="Relat&#243;rios">
+  <ion-content class="padding">
+	  <div class="list list-inset">
+		  <div class="item item-input item-select">
+			  <div class="input-label">
+				  Prm. de Processo
+			  </div>
+			  <select name="repeatSelect" id="repeatSelect" ng-model="cadastro.tipoparametro">
+				  <option ng-repeat="option in listatipoparametro" value="{{option.id}}">{{option.descricao}}</option>
+			  </select>
+		  </div>
+		  <br>
+		  <div class="item item-input item-select">
+			  <div class="input-label">
+				  &#211;leo
+			  </div>
+			  <select name="repeatSelectOleo" id="repeatSelectOleo" ng-model="cadastro.oleo">
+				  <option ng-repeat="optionOleo in listaoleo" value="{{optionOleo.id}}">{{optionOleo.descricao}}</option>
+			  </select>
+		  </div>
+		  <br>
+          <div class="input-label"> De</div>
+		  <ionic-datepicker input-obj="datepickerObjectPopUp"  ng-model="cadastro.dtinicioRel">
+			  <button class="button button-block button-positive ng-binding">{{datepickerObject.inputDate | date }}</button>
+		  </ionic-datepicker>
+		  <br>
+          <div class="input-label"> Até</div>
+          <ionic-datepicker input-obj="datepickerObjectPopUpFim"  ng-model="cadastro.dtfimRel">
+			  <button class="button button-block button-positive ng-binding">{{datepickerObjectFim.inputDate | date }}</button>
+		  </ionic-datepicker>
+		  <br>
+		  <button class="button button-full button-positive" ui-sref="tabs.congrafico">Gerar Gráfico</button>
+		  <button class="button button-full button-positive" ui-sref="tabs.congrafico">Gerar Arquivo</button>
+	  </div>
+  </ion-content>
+</ion-view>

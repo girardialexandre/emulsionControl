@@ -1,0 +1,31 @@
+<ion-view view-title="Cadastro de M&#225;quina">
+	<ion-content class="padding">	
+		<div class="list list-inset">
+		    <input type="hidden" ng-model="cadastro.id">
+			<label class="item item-input">
+				<input ng-model="cadastro.cdMaquina" type="text" placeholder="Digite o c&#243;digo da m&#225;quina">
+			</label>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.descricao" type="text" placeholder="Digite a descri&#231;&#227;o da m&#225;quina">
+			</label>
+			<br>
+			<div class="item item-input item-select">
+				<div class="input-label">
+				  Tipo de M&#225;quina
+				</div>
+				 <select name="repeatSelect" id="repeatSelect" ng-model="cadastro.tipomaquina">
+      				<option ng-repeat="option in listatipomaquina" value="{{option.id}}">{{option.descricao}}</option>
+    			</select>
+			</div>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.vltanque"  type="number" placeholder="Digite o volume total da m&#225;quina">
+			</label>
+			<br>
+			<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+			<button class="button button-full button-positive" ui-sref="tabs.consmaquina">Consultar</button>
+			<p>{{ statusMessage }}</p>
+		</div>		
+    </ion-content>
+</ion-view>

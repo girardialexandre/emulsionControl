@@ -1,0 +1,46 @@
+<ion-view view-title="Marca&#231;&#227;o">
+    <ion-content class="padding">	
+		<div class="list list-inset">	
+			<input type="hidden" ng-model="cadastro.id">	
+			<div class="item item-input item-select">
+				<div class="input-label">
+				  Prm. de Processo
+				</div>
+				 <select name="repeatSelect" id="repeatSelect" ng-model="cadastro.tipoparametro">
+      				<option ng-repeat="option in listatipoparametro" value="{{option.id}}">{{option.descricao}}</option>
+    			</select>
+			</div>
+			<br>
+			<div class="item item-input item-select">
+				<div class="input-label">
+					&#211;leo
+				</div>
+				<select name="repeatSelectOleo" id="repeatSelectOleo" ng-model="cadastro.oleo">
+      				<option ng-repeat="optionOleo in listaoleo" value="{{optionOleo.id}}">{{optionOleo.descricao}}</option>
+    			</select>
+			</div>
+			<br>
+			<ionic-datepicker input-obj="datepickerObjectPopUp"  ng-model="cadastro.dtlancamento">
+				<button class="button button-block button-positive ng-binding">{{datepickerObject.inputDate | date }}</button> 
+			</ionic-datepicker>
+			<!--<label class="item item-input"> Quantidade de concentra&#231;&#227;o</label>
+			<morph-carousel data-items="items" on-selected="selectedItem" identifier="modal-carousel" show-value="number"></morph-carousel>
+			-->
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.qtconcentracao" type="number" placeholder="Digite a quantidade de concentra&#231;&#227;o">
+			</label>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.dsobservacao" type="text" placeholder="Digite a observa&#231;&#227;o">
+			</label>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.usrmedicao" type="text" placeholder="Digite o usu&#225;rio que realizou a medi&#231;&#227;o">
+			</label>
+			
+			<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+			<button class="button button-full button-positive" ui-sref="tabs.consmarcacao">Consultar</button>
+		</div>		
+    </ion-content>
+</ion-view>

@@ -1,0 +1,43 @@
+<ion-view view-title="Cadastro de Par&#226;metros de Processo">
+	<ion-content class="padding">	
+		<div class="list list-inset">
+			<label class="item item-input">
+				<input ng-model="cadastro.descricao" type="text" placeholder="Digite a descri&#231;&#227;o do Par&#226;metros de Processo">
+			</label>
+			<br>
+			<div class="item item-input item-select">
+				<input type="hidden" ng-model="cadastro.id">
+				<div class="input-label">
+				  M&#225;quina
+				</div>
+				<select name="repeatSelect" id="repeatSelect" ng-model="cadastro.maquina">
+      				<option ng-repeat="option in listamaquina" value="{{option.id}}">{{option.descricao}}</option>
+    			</select>
+			</div>
+			<br>
+			<div class="item item-input item-select">
+				<div class="input-label">
+					&#211;leo
+				</div>
+				<select name="repeatSelectOleo" id="repeatSelectOleo" ng-model="cadastro.oleo">
+      				<option ng-repeat="optionOleo in listaoleo" value="{{optionOleo.id}}">{{optionOleo.descricao}}</option>
+    			</select>
+			</div>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.vlConcentracaoMin" type="number" placeholder="Digite o valor da concentra&#231;&#227;o m&#237;nima">
+			</label>
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.vlConcentracaoMax" type="number" placeholder="Digite o valor da concentra&#231;&#227;o m&#225;xima">
+			</label>			
+			<br>
+			<label class="item item-input">
+				<input ng-model="cadastro.vlPh" type="number" placeholder="Digite o valor de Ph">
+			</label>
+			<br>
+			<button class="button button-full button-positive" ng-click="save()">Salvar</button>
+			<button class="button button-full button-positive" ui-sref="tabs.consprmprocesso">Consultar</button>
+		</div>			
+    </ion-content>
+</ion-view>

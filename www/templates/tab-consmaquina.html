@@ -1,0 +1,25 @@
+<ion-view view-title="Consulta M&#225;quinas">
+	<ion-content class="has-header">
+		<ion-list show-delete="data.showDelete" show-reorder="data.showReorder">
+		<ion-list
+		  show-delete="shouldShowDelete"
+		  can-swipe="listCanSwipe">
+			<ion-item ng-repeat="item in list" 
+					  collection-item-width="'100%'"
+					  collection-item-height="52"
+					  ng-style="{ height: '120px', width: '100%', 'border-bottom': 'none' }"		
+					   class="item-remove-animate">					
+				<ion-option-button class="button-positive" ng-click="edit(item)">
+					Editar
+				</ion-option-button>
+				<ion-option-button class="button-assertive" ng-click="onItemDelete(item)">
+					Excluir
+				</ion-option-button>
+				<p>C&#243;digo : {{item.cdMaquina}}</p>
+				<p>Descri&#231;&#227;o : {{item.descricao}}</p>
+				<p>Tipo de M&#225;quina : {{item.dsTipoMaquina}}</p>
+				<p>Volume do Tanque : {{item.vltanque}}</p>
+			</ion-item>
+		</ion-list>
+	</ion-content>	
+</ion-view>
